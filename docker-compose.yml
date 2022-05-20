@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  server:
+    image: rancher/rancher
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - '80:80'
+      - '443:443'
+      - '6443:6443'
+    volumes:
+      - rancher-vol:/var/lib/rancher
+    command: --acme-domain rancher.seudominio.com.br
+  
+volumes:
+  rancher-vol:
