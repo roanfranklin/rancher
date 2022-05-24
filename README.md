@@ -63,3 +63,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:v2.4.15 \
   --acme-domain rancher.seudominio.com.br
 ```
+
+### Observação Importante
+
+Caso você não tenha domínio e queira levantar o rancher como teste em sua máquina local, tente remover o *--acme-domain*.
